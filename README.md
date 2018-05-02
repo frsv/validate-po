@@ -1,5 +1,7 @@
 # validate-po
 
+[![Build Status](https://travis-ci.org/frsv/validate-po.svg?branch=master)](https://travis-ci.org/frsv/validate-po)
+
 Validate .po files for string translations, correct interpolations and other errors
 
 ## Installation
