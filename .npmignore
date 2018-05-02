@@ -1,0 +1,13 @@
+.gitignore
+.npmignore
+
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+
+__tests__/
+.travis.yml
+
+CONTRIBUTING.md
+.yaspellerrc
