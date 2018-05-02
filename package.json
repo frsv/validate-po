@@ -3,26 +3,19 @@
   "version": "1.0.0",
   "description": "Validate po files for string translations, correct interpolations and errors",
   "scripts": {
-    "test": "jest && eslint *.js && yarn run size && yarn run spellcheck",
-    "size": "size-limit",
+    "test": "jest && eslint *.js && yarn run spellcheck",
     "spellcheck": "yaspeller *.md"
   },
   "keywords": [
     "po",
     "localization",
     "translations",
-    "gettext"
+    "gettext",
+    "validation"
   ],
   "bin": "cli.js",
   "repository": "frsv/validate-po",
   "author": "Roman Fursov <contact@frsv.me>",
-  "size-limit": [
-    {
-      "limit": "300 B",
-      "webpack": false,
-      "path": "cli.js"
-    }
-  ],
   "jest": {
     "modulePathIgnorePatterns": [
       "<rootDir>/__tests__/fixtures"
@@ -36,9 +29,9 @@
     "gettext-parser": "^1.3.1"
   },
   "devDependencies": {
+    "cross-spawn": "^6.0.5",
     "eslint": "^4.19.1",
     "jest": "^22.4.3",
-    "size-limit": "^0.17.0",
     "yaspeller": "^4.0.3"
   }
 }

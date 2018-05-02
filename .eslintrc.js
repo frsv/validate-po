@@ -6,7 +6,8 @@ module.exports = {
         "jest": true
     },
     "globals": {
-        "process": false
+        "process": false,
+        "__dirname": false
     },
     "extends": "eslint:recommended",
     "rules": {
