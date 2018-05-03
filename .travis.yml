@@ -3,8 +3,6 @@ cache: yarn
 node_js:
   - node
 
-jobs:
-  include:
-    - stage: Produce Coverage
-      node_js: node
-      script: yarn run coverage && rm -rf ./coverage
+script:
+  - yarn test
+  - yarn run coverage-ci && rm -rf ./coverage

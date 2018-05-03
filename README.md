@@ -1,6 +1,7 @@
 # validate-po
 
 [![Build Status](https://travis-ci.org/frsv/validate-po.svg?branch=master)](https://travis-ci.org/frsv/validate-po)
+[![Coverage Status](https://coveralls.io/repos/github/frsv/validate-po/badge.svg?branch=master)](https://coveralls.io/github/frsv/validate-po?branch=master)
 
 Validate .po files for string translations, correct interpolations and other errors
 
