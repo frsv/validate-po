@@ -8,6 +8,6 @@ msgstr ""
 
 
 #: some comment, which will not cause any effect
-msgid "Тестовая строка"
+msgid "Test string"
 msgstr ""
 

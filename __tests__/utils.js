@@ -83,7 +83,9 @@ describe('getFilesInfo', () => {
 describe('getPaths', () => {
     it('return all files in directory', () => {
         expect(utils.getPaths([{ path: fixture('po'), isDirectory: true }]).sort()).toEqual([
+            fixture('po/invalid_interpolation.po'),
             fixture('po/missed_translation.po'),
+            fixture('po/translation_copies_msgid.po'),
             fixture('po/valid.po'),
         ])
     })
