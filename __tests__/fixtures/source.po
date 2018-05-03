@@ -1,0 +1,15 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2018-04-19T07:39:25.096Z\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"X-Generator: fixtures\n"
+
+
+#: some comment, which will not cause any effect
+msgid "Тестовая строка"
+msgstr ""
+
+msgid "Another string"
+msgstr ""

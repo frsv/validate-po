@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const gettextParser = require('gettext-parser')
 
 const shallowCompare = (left, right) => {
     return Object.keys(left).every((key) => left[key] === right[key])
@@ -44,9 +45,16 @@ const getPaths = (filesData) => {
     return paths
 }
 
+const getPoTranslations = (path) => {
+    const input = fs.readFileSync(path)
+    const po = gettextParser.po.parse(input)
+    return po.translations['']
+}
+
 module.exports = {
     shallowCompare,
     getTagsCount,
     getFilesInfo,
     getPaths,
+    getPoTranslations,
 }
