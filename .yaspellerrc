@@ -5,6 +5,8 @@
     "PO",
     "po",
     "linter",
-    "md"
+    "md",
+    "validators",
+    "Todo"
   ]
 }

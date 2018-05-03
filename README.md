@@ -44,7 +44,7 @@ Or even entire directory:
 yarn run validate-po /home/localizations
 ```
 
-## Todo`s
+## Todo
 
 * Custom validators
 * Group output
