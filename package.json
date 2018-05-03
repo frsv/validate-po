@@ -22,7 +22,7 @@
       "<rootDir>/__tests__/fixtures"
     ]
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "colors": "^1.2.3",
     "command-line-args": "^5.0.2",

@@ -26,14 +26,34 @@ Add script to your `package.json`:
 
 ## Usage
 
-Basic example with some files:
+For all available options run:
 
+```bash
+yarn run validate-po --help
 ```
+
+You can pass paths to some files:
+
+```bash
 yarn run validate-po /home/localizations/en.po /home/localizations/ru.po
 ```
 
-Example with entire directory:
+Or even entire directory:
 
-```
+```bash
 yarn run validate-po /home/localizations
 ```
+
+## Todo`s
+
+* Custom validators
+* Group output
+* More examples
+
+## Contributing
+
+[Contribution guidelines for this project](CONTRIBUTING.md)
+
+## License
+
+[MIT](LICENSE)
