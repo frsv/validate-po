@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const commandLineArgs = require('command-line-args')
-const colors = require('colors')
+const colors = require('./colors')
 const validatePo = require('./validate')
 
 const optionDefinitions = [
@@ -69,7 +69,7 @@ const hasErrors = Object.values(validationResult).some((errors) => !!errors.leng
 if (hasErrors) {
     Object.entries(validationResult).forEach(([path, errors]) => {
         if (errors.length) {
-            console.log(colors.red.underline(`${path}:`))
+            console.log(colors.red().underline(`${path}:`))
             console.log(`\t${errors.join('\n\t')}`)
         }
     })

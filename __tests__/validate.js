@@ -1,5 +1,5 @@
 const path = require('path')
-const colors = require('colors')
+const colors = require('../colors')
 const validatePo = require('../validate')
 
 const fixture = (file) => path.join(__dirname, 'fixtures', file)
