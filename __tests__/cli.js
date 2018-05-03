@@ -5,7 +5,7 @@ const fixture = (file) => path.join(__dirname, 'fixtures', file)
 
 const run = (args) => {
     const options = { env: process.env }
-    const cli = spawn(path.join(__dirname, '../../cli.js'), args, options)
+    const cli = spawn(path.join(__dirname, '../cli.js'), args, options)
     return new Promise((resolve) => {
         let out = ''
         cli.stdout.on('data', (data) => {

@@ -2,7 +2,7 @@
 
 const commandLineArgs = require('command-line-args')
 const colors = require('colors')
-const validatePo = require('./lib/validate')
+const validatePo = require('./validate')
 
 const optionDefinitions = [
     { name: 'src', type: String, multiple: true, defaultOption: true },

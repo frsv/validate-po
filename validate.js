@@ -6,7 +6,7 @@ const {
     getFilesInfo,
     getTagsCount,
     shallowCompare,
-} = require('./helpers')
+} = require('./utils')
 
 const translationsExists = (translations, msgid) => {
     if (!translations.length) {
@@ -68,14 +68,7 @@ const validatePoFileCreator = (validators) => (path, source) => {
         ...errors,
         ...validateKey(translations[key], validators, source),
     ], [])
-
     return errors
-
-    // if (errors.length) {
-    // console.log(colors.red.underline(`${path}:`))
-    //     console.log(`\t${errors.join('\n\t')}`)
-    // }
-    // return !!errors.length
 }
 
 const validatePo = (files, sourcefile) => {
@@ -90,14 +83,18 @@ const validatePo = (files, sourcefile) => {
         validators.push(msgidsTheSameInSource)
     }
     const validatePoFile = validatePoFileCreator(validators)
-    const filesData = getFilesInfo(files)
-    const paths = getPaths(filesData)
-
-    const validationErrors = {}
-    paths.forEach((path) => {
-        validationErrors[path] = validatePoFile(path, sourcefile)
-    })
-    return validationErrors
+    try {
+        const filesData = getFilesInfo(files)
+        const paths = getPaths(filesData)
+        const validationErrors = {}
+        paths.forEach((path) => validationErrors[path] = validatePoFile(path, sourcefile))
+        return validationErrors
+    } catch(error) {
+        const { path, message } = error
+        if (path) {
+            return {[path]: [message]}
+        }
+    }
 }
 
 module.exports = validatePo

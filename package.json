@@ -17,6 +17,7 @@
   "repository": "frsv/validate-po",
   "author": "Roman Fursov <contact@frsv.me>",
   "jest": {
+    "collectCoverage": true,
     "modulePathIgnorePatterns": [
       "<rootDir>/__tests__/fixtures"
     ]
