@@ -18,4 +18,18 @@ describe('validatePo', () => {
             [path]: [`"${colors.gray('Тестовая строка')}": Some translations are missed`],
         })
     })
+
+    it('should handle EROENT error', () => {
+        const path = fixture('not_exist.js')
+        expect(validatePo([path])).toEqual({
+            [path]: [`ENOENT: no such file or directory, lstat '${path}'`],
+        })
+    })
+
+    it('should handle EROENT error for sourcefile', () => {
+        const path = fixture('not_exist.js')
+        expect(validatePo([fixture('po/valid.po')], path)).toEqual({
+            [path]: [`ENOENT: no such file or directory, open '${path}'`],
+        })
+    })
 })

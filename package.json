@@ -4,6 +4,7 @@
   "description": "Validate po files for string translations, correct interpolations and errors",
   "scripts": {
     "test": "jest && eslint *.js && yarn run spellcheck",
+    "coverage-ci": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "spellcheck": "yaspeller *.md"
   },
   "keywords": [
@@ -17,7 +18,6 @@
   "repository": "frsv/validate-po",
   "author": "Roman Fursov <contact@frsv.me>",
   "jest": {
-    "collectCoverage": true,
     "modulePathIgnorePatterns": [
       "<rootDir>/__tests__/fixtures"
     ]
@@ -30,6 +30,7 @@
     "gettext-parser": "^1.3.1"
   },
   "devDependencies": {
+    "coveralls": "^3.0.1",
     "cross-spawn": "^6.0.5",
     "eslint": "^4.19.1",
     "jest": "^22.4.3",
